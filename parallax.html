@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallx scrolling website</title>
+    <link rel="stylesheet" href="pl.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Jungle</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+        <img src="bird1.png" id="bird1">
+        <img src="bird2.png" id="bird2">
+        <img src="forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+
+        <img src="rocks.png" id="rocks">
+        <img src="water.png" id="water">
+    </section>
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, incidunt ea omnis ab quis at debitis! Nesciunt omnis consectetur ullam expedita accusamus, saepe ratione deleniti eligendi praesentium unde numquam esse quas voluptatem! Assumenda, nostrum unde? Nobis, dolores? Debitis quibusdam, itaque laboriosam nulla ex obcaecati saepe! Accusamus aliquid aliquam est nulla ipsam incidunt laboriosam veniam! Ratione beatae ut aut eveniet? Obcaecati, ipsum iusto natus libero tempore corporis repellat quaerat, necessitatibus voluptatum sint, sit ea rerum illo iste alias! Aut, quis ad, vitae consequuntur in odio perspiciatis deserunt dolorem, debitis vero animi provident? Repellendus veniam veritatis velit.<br><br> Vel, corrupti maiores. Laborum officia magnam, consectetur voluptatem, corrupti iusto debitis porro totam repellat dolorem nemo perferendis nihil nisi neque deleniti delectus quos quod voluptate dicta accusamus ea! Enim numquam voluptates animi, ab rem voluptatem voluptatum tempora laboriosam, dicta cum incidunt. Officiis dolores ipsum magni est molestiae temporibus? Porro veniam, ea repudiandae repellendus eos perspiciatis rerum adipisci optio id iste non voluptatem aut esse tempora vero expedita harum dignissimos saepe blanditiis ipsam laborum.<br><br> Aliquid alias quam quidem laborum doloribus nulla ratione eligendi assumenda optio sunt aut ullam maxime beatae sed asperiores sequi at vero, tempora doloremque magni quis itaque? Ipsa, a minus? Facilis molestiae aliquid quibusdam eligendi ratione maiores vero adipisci animi, officiis quod voluptatem veniam doloremque error magni autem necessitatibus.<br><br> Aliquam, a? Recusandae ducimus exercitationem rem? Totam quae tempore, ducimus ex aperiam pariatur corporis ipsam dolores, error molestiae repudiandae, maxime fuga dicta nam reiciendis fugiat recusandae iure! Nihil dolorem maxime ducimus expedita fugit esse harum magnam in fuga minima velit doloribus nisi<br><br> deserunt animi autem quaerat quam, quas facere earum? Voluptates eos assumenda, dicta quas blanditiis nam numquam non autem omnis beatae laudantium at exercitationem culpa facere facilis voluptate molestias quisquam modi atque labore, illo quos pariatur odio? In dolor, beatae rem quia ut, asperiores, quod corrupti placeat provident dignissimos neque maiores recusandae? Quos, necessitatibus tempora! Laboriosam fuga veritatis ut odio iure provident blanditiis quibusdam natus nobis maiores at, consectetur, explicabo eum perspiciatis velit expedita repellat maxime dolores aut eligendi possimus, deserunt dolorem? Modi possimus labore consequatur ab. Dolore amet nobis ea corrupti aspernatur quisquam quasi porro, eius consequatur sint, ex dicta dolor magni accusamus qui! Modi ratione reprehenderit fuga eligendi, culpa dolores, non, quisquam id esse perferendis temporibus! Tempora in officia voluptate, debitis ullam rem id optio est incidunt deserunt, vitae ratione dolore obcaecati quidem eaque atque labore veniam porro iste qui sed.<br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, vel, esse necessitatibus aut labore quia quos odit nihil facilis laudantium laborum magni quidem architecto sequi recusandae consequatur temporibus aliquam dolore mollitia? Sit, omnis. Officiis consequuntur impedit consequatur quos? Enim, accusantium!</p>
+    </div>
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY
+
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px'
+            forest.style.top = value * 0.25 + 'px'
+            header.style.top = value * 0.5 + 'px'
+        })
+    </script>
+</body>
+</html>
